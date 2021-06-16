@@ -1,0 +1,32 @@
+.homePage_product {
+  max-width: 1200px;
+  margin: 50px auto;
+
+  .homePage_product_row_label {
+    color: #0e263e;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 25px 0;
+  }
+  .homePage_product_row_btnMore {
+    text-align: center;
+    margin: 30px 0;
+    a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: #e48f27;
+      padding: 15px 20px;
+      border-radius: 12px;
+      letter-spacing: 0.05rem;
+      border: 1px solid #e48f27;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: #e48f27;
+        background-color: white;
+        border: 1px solid #e48f27;
+      }
+    }
+  }
+}

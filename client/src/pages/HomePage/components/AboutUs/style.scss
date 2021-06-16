@@ -1,0 +1,131 @@
+$myBlue: #0e263e;
+$myOrange: #e48f27;
+.aboutUs {
+  background-color: $myOrange;
+  color: white;
+  padding: 50px 0;
+  .aboutUs-title {
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 0 0 25px 0;
+      font-size: 1.8rem;
+    }
+  }
+  .aboutUs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 980px;
+    margin: 0 auto;
+    .aboutUs-img {
+      img {
+        max-width: 230px;
+        height: 320px;
+        margin: 0 0 25px 0;
+        border-radius: 20px;
+      }
+    }
+    .aboutUs-content {
+      max-width: 680px;
+      padding: 0 25px;
+      .aboutUs-content-header {
+        h2 {
+          font-size: 1.5rem;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.expInfo {
+  background-color: $myBlue;
+  color: white;
+  h2 {
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    padding: 35px 0 0;
+  }
+  .expInfo-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .expInfo-item {
+      min-width: 200px;
+      text-align: center;
+      margin: 25px 0;
+      .expInfo-item-num {
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 50%;
+        padding: 12%;
+        margin: 20px auto;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.comment {
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 35px 0;
+  }
+  .comment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .comment-item {
+      min-width: 300px;
+      box-shadow: 0 0 25px #bfbfbf4d;
+      max-width: 415px;
+      border-radius: 30px;
+      padding: 5px 35px 2px;
+      margin: 10px 50px;
+      .cmt-item-actor {
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 15px;
+        }
+        h3 {
+          margin: 0;
+          transform: translateY(7px);
+          font-size: 1rem;
+          font-weight: 700;
+          color: $myBlue;
+        }
+        .cmt-item-actor-detail {
+          display: inline-block;
+          transform: translateY(10px);
+          padding-left: 15px;
+          .rating {
+            display: flex;
+            h1 {
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: $myBlue;
+            }
+            svg {
+              font-size: 0.8rem;
+            }
+            .ant-rate {
+              padding-left: 10px;
+              color: $myOrange;
+              .ant-rate-star {
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+      .cmt-item-review {
+        padding: 25px 0 0;
+        color: gray;
+      }
+    }
+  }
+}

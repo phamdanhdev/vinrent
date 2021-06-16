@@ -1,0 +1,235 @@
+$myBlue: #0e263e;
+$myOrange: #e48f27;
+.productDetail {
+  margin-top: 81px;
+  .pd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    .pdBack {
+      width: 100%;
+      height: 60px;
+      display: none;
+      padding: 0 20px;
+      background-color: $myBlue;
+      a {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        i {
+          font-size: 1.2rem;
+          color: white;
+        }
+        span {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 700;
+          padding: 0 10px;
+        }
+      }
+    }
+    .pdContent {
+      .pdCarousel {
+        .slick-arrow {
+          z-index: 1;
+          display: block;
+          position: absolute;
+          top: 0;
+          margin: 0;
+          height: 100%;
+          background-color: #2525252b;
+          width: 50px;
+        }
+        .slick-prev {
+          left: 0;
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f053";
+            color: white;
+            font-size: 2rem;
+          }
+        }
+        .slick-next {
+          right: 0;
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f054";
+            color: white;
+            font-size: 2rem;
+          }
+        }
+        .ant-image {
+          width: 100%;
+          height: 420px;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          .ant-image-img {
+            height: 100%;
+            width: auto !important;
+          }
+        }
+      }
+      .pdContent-container {
+        padding: 15px;
+        .pdTag {
+          display: inline-block;
+          transform: translateY(-3px);
+        }
+        .pdName {
+          padding-top: 15px;
+          h1 {
+            display: inline;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $myBlue;
+          }
+        }
+        .pdUtility {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 15px 0;
+          .pdUtil {
+            font-size: 1rem;
+            color: $myBlue;
+            margin-right: 15px;
+            i {
+              color: #cacdd0;
+              margin-right: 6px;
+            }
+          }
+        }
+        .pdPriceWrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 0;
+          border: 2px solid $myOrange;
+          padding: 10px;
+          border-radius: 10px;
+          .pdPrice {
+            color: $myOrange;
+            font-size: 1.4rem;
+            font-weight: 700;
+            i {
+              -webkit-transform: rotate(90deg);
+              -moz-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+              -o-transform: rotate(90deg);
+              transform: rotate(90deg);
+              margin-right: 6px;
+            }
+          }
+          .pdVisited {
+            color: #cacdd0;
+            i {
+              margin-right: 6px;
+            }
+          }
+        }
+        .pdDescription {
+          h2 {
+            color: #0e263e;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+    .pdContact {
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      .pdContactWrapper {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 100px;
+        .pdContact-img {
+          text-align: center;
+          img {
+            width: 150px;
+          }
+          h2 {
+            color: $myBlue;
+            padding-top: 15px;
+          }
+        }
+        .pdContact-phone {
+          text-align: center;
+          margin-top: 20px;
+          a {
+            color: white;
+            background-color: #33a837;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: block;
+            i {
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+            span {
+              padding-left: 15px;
+            }
+          }
+        }
+        .pdContact-zalo {
+          text-align: center;
+          margin-top: 20px;
+          a {
+            color: white;
+            background-color: #0573ff;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .pdContent {
+      width: 100% !important;
+      max-width: none !important;
+    }
+    .pdContact {
+      position: fixed !important;
+      bottom: 0;
+      width: 100% !important;
+      z-index: 15;
+      height: 50px !important;
+      background-color: #33a837 !important;
+      .pdContactWrapper {
+        padding-top: 0 !important;
+        width: 100% !important;
+        .pdContact-img {
+          display: none !important;
+        }
+        .pdContact-phone {
+          margin-top: 0 !important;
+          a {
+            padding: 5px 15px !important;
+            border-radius: unset !important;
+          }
+        }
+        .pdContact-zalo {
+          display: none !important;
+        }
+      }
+    }
+    .ant-image {
+      height: 60vw !important;
+    }
+    .pdBack {
+      display: block !important;
+    }
+  }
+}
