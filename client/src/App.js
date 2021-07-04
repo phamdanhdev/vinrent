@@ -9,6 +9,7 @@ import AppFooter from "./components/Footer";
 import AppProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import AppProductPage from "./pages/Product";
+import AppDashboardHeader from "./components/Dashboard/Header";
 function App() {
   return (
     <Router>
@@ -35,19 +36,6 @@ function App() {
         <Footer>
           <AppFooter />
         </Footer>
-      </Layout>
-
-      <Layout>
-        <Header>
-          
-        </Header>
-        <Content>
-
-        </Content>
-        <Footer>
-
-        </Footer>
-
       </Layout>
     </Router>
   );

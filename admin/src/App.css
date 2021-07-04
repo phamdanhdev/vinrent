@@ -1,0 +1,11 @@
+* {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.ant-layout-footer {
+  background-color: #001529 !important;
+}
