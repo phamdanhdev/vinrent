@@ -2,9 +2,26 @@ import React, { useState } from "react";
 import "./style.scss";
 import { Modal, Button, Cascader, Input } from "antd";
 import { FilterOutlined, SearchOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import {
+  CHANGE_TYPE_SEARCH,
+  CHANGE_SORT_SEARCH,
+  CHANGE_AREA_SEARCH,
+} from "../../redux/constants/actionTypes";
+import {
+  changeTypeSearch,
+  changeAreaSearch,
+  changeSortSearch,
+} from "../../redux/actions/search";
+import { getProducts, getProductsByName } from "../../redux/actions/product";
+
 const { Search } = Input;
 
 export default function AppSearchTools() {
+  const dispatch = useDispatch();
+  const searchData = useSelector((state) => state.search);
+  const history = useHistory();
   const optionsLoaiDichVu = [
     {
       value: "ChoThue",
@@ -119,23 +136,25 @@ export default function AppSearchTools() {
   ];
 
   function onChangeLoaiDichVu(value) {
-    console.log(value);
+    dispatch(changeTypeSearch(value));
   }
 
   function onChangeKhuVuc(value) {
-    console.log(value);
+    dispatch(changeAreaSearch(value));
   }
 
   function onChangeFilter(value) {
-    console.log(value);
+    dispatch(changeSortSearch(value));
   }
 
   function onClickFilter() {
-    console.log("onClickFilter");
+    dispatch(getProducts(searchData));
+    history.push("/product");
   }
 
   function onClickSearch(value) {
-    console.log(value);
+    dispatch(getProductsByName(value));
+    history.push("/product");
   }
 
   //FILTER MODEL

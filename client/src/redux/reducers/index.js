@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import posts from "./posts";
-import modal from "./modal";
-export default combineReducers({ posts, modal });
+import search from "./search";
+import product from "./product";
+export default combineReducers({ search, product });

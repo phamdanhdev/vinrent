@@ -1,8 +1,11 @@
 import axios from "axios";
 
-const URL = "https://demo-mern-blog-phamdanhdev.herokuapp.com";
+// const URL = "https://demo-mern-blog-phamdanhdev.herokuapp.com";
+const API = axios.create({ baseURL: "http://localhost:5000" });
 
-export const fetchPosts = () => axios.get(`${URL}/posts`);
-export const createPost = (payload) => axios.post(`${URL}/posts`, payload);
-export const updatePost = (payload) =>
-  axios.post(`${URL}/posts/update`, payload);
+export const getProducts = (searchData) =>
+  API.get(
+    `/product?type=${searchData.type[0]}&kind=${searchData.type[1]}&province=${searchData.area[0]}&district=${searchData.area[1]}`
+  );
+export const getProductsByName = (searchText) =>
+  axios.get(`${URL}/products?name=${searchText}`);

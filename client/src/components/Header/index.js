@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Drawer, Button, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import {
   DollarCircleOutlined,
   KeyOutlined,
@@ -68,10 +69,10 @@ export default function AppHeader() {
   const menuForService = (
     <Menu>
       <Menu.Item key="0">
-        <a href="#">Ký Gửi Bán</a>
+        <Link to="/other">Ký Gửi Bán</Link>
       </Menu.Item>
       <Menu.Item key="1">
-        <a href="#">Hợp Tác Cho Thuê</a>
+        <Link to="/other">Hợp Tác Cho Thuê</Link>
       </Menu.Item>
     </Menu>
   );

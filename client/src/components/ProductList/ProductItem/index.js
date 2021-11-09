@@ -4,7 +4,7 @@ import image2 from "../../../assets/images/carousel/nha2.jpeg";
 import "./style.scss";
 import { Badge, Tag } from "antd";
 
-export default function AppProductItem() {
+export default function AppProductItem(product) {
   return (
     <div className="productItem">
       <div className="productItem_img">
@@ -16,7 +16,7 @@ export default function AppProductItem() {
       <div className="productItem_content">
         <div className="productItem_header">
           <div className="productItem_address">
-            <Tag color="#108ee9">TP.HCM</Tag>
+            <Tag color="#108ee9">{product.province}</Tag>
             <Tag color="#f50">Quận 12</Tag>
             <Tag color="#87d068">Cho Thuê</Tag>
             <Tag color="#2db7f5">Mã: B032</Tag>

@@ -1,4 +1,4 @@
-import HomePage from "./pages/HomePage";
+// import HomePage from "./pages/HomePage";
 import AppHome from "./pages/HomePage/index";
 import "./App.css";
 import "antd/dist/antd.css";
@@ -9,7 +9,7 @@ import AppFooter from "./components/Footer";
 import AppProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import AppProductPage from "./pages/Product";
-import AppDashboardHeader from "./components/Dashboard/Header";
+import OtherPage from "./pages/OtherPage";
 function App() {
   return (
     <Router>
@@ -27,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/product/1">
               <AppProductDetail />
+            </Route>
+            <Route path="/other">
+              <OtherPage />
             </Route>
             <Route path="*">
               <NotFound />

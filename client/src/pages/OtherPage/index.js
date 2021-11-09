@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function NotFound() {
+export default function OtherPage() {
   return (
     <div
       className="not-found"
@@ -14,8 +14,8 @@ export default function NotFound() {
         flexDirection: "column",
       }}
     >
-      <h2>Sorry ...</h2>
-      <p>That page can be found!</p>
+      <p>Ký gửi hoặc hợp tác, vui lòng liên hệ</p>
+      <h2>08.98.08.2836</h2>
       <Link to="/">Back to Homepage</Link>
     </div>
   );
